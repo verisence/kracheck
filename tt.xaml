@@ -1,0 +1,262 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="tt" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1067,1566" sap2010:WorkflowViewState.IdRef="tt_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="tt" sap:VirtualizedContainerService.HintSize="1047,1506" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <While sap:VirtualizedContainerService.HintSize="1005,921" sap2010:WorkflowViewState.IdRef="While_1" Condition="[outLooper&lt;outData.Rows.Count]">
+      <Sequence sap:VirtualizedContainerService.HintSize="621,763" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:BuildDataTable DataTable="[builtPinData]" DisplayName="Initialize Out Data Table" sap:VirtualizedContainerService.HintSize="579,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;_x0023_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Taxpayer_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;iTax_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+        <If Condition="[outData.Rows(outLooper)(&quot;Taxpayer Name&quot;).ToString=&quot;Invalid PIN&quot;]" sap:VirtualizedContainerService.HintSize="579,472" sap2010:WorkflowViewState.IdRef="If_1">
+          <If.Then>
+            <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,324" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" WorkbookPath="output.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="272,215" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;A&quot;+outLooper.ToString+&quot;:E&quot;+outLooper.ToString]" />
+                    <ui:ExcelSetRangeColor Color="[System.Drawing.Color.ForestGreen]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="230,22" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_1" Range="[&quot;A&quot;+(outLooper+2).ToString+&quot;:E&quot;+(outLooper+2).ToString]" SheetName="Sheet1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
+          </If.Then>
+        </If>
+        <Assign sap:VirtualizedContainerService.HintSize="579,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[outLooper]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[outLooper+1]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+    </While>
+    <p:CVScope DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="tfOBxG9ui9Ljj1P4T6bKjCLMSvXE3/V8VUxxZsqrpfZH9+0Zlfm+53KfpLYn2i9i" ContinueOnError="True" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="1005,352" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Text 'Taxpayer Details' (26,51,102,13)&quot; +&#xA;&quot;Anchor: Text 'Obligation Details' (26,148,110,13)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="400,106" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="0c5c3121878d4d2d7be920ca23d7fd0d" Result="[elementOut]" TimeoutMS="1000" Version="V1">
+              <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor>
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor DesignTimeArea="26, 148, 110, 13" ElementType="Text" Text="Obligation Details" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor DesignTimeArea="26, 51, 102, 13" ElementType="Text" Text="Taxpayer Details" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+            </p:CvElementExistsWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache InformativeScreenshot="b97896f56abe171a9e863899826b68d8" LogicalPosition="200, 335" OcrText="Taxpayer Details&#xA;PIN&#xA;PIN Status&#xA;Obligation Details A012263031Z&#xA;Active&#xA;Obligation Name&#xA;Income Tax - Resident Individual PIN Details&#xA;Taxpayer Name&#xA;iTax Status&#xA;Registered Phil Kipkemboi&#xA;Registered Effedive To Date&#xA;1010812018" Position="200, 335" ScreenshotGuid="329853e7-cd99-409d-bf26-c22775f3d917" ServerVersion="1">
+          <uc:CVCache.CvTables>
+            <x:Array Type="uc:CvTableInfo">
+              <uc:CvTableInfo>
+                <uc:CvTableInfo.Columns>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>16</x:Int32>
+                    <x:Int32>209</x:Int32>
+                    <x:Int32>432</x:Int32>
+                    <x:Int32>689</x:Int32>
+                    <x:Int32>926</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Columns>
+                <uc:CvTableInfo.Rows>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>65</x:Int32>
+                    <x:Int32>89</x:Int32>
+                    <x:Int32>109</x:Int32>
+                    <x:Int32>122</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Rows>
+              </uc:CvTableInfo>
+              <uc:CvTableInfo>
+                <uc:CvTableInfo.Columns>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>16</x:Int32>
+                    <x:Int32>383</x:Int32>
+                    <x:Int32>561</x:Int32>
+                    <x:Int32>741</x:Int32>
+                    <x:Int32>929</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Columns>
+                <uc:CvTableInfo.Rows>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>162</x:Int32>
+                    <x:Int32>191</x:Int32>
+                    <x:Int32>213</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Rows>
+              </uc:CvTableInfo>
+            </x:Array>
+          </uc:CVCache.CvTables>
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+              <uc:CvElementInfo Category="InputBox" Region="29, 69, 179, 22" />
+              <uc:CvElementInfo Category="InputBox" Region="695, 91, 229, 22" />
+              <uc:CvElementInfo Category="Cell" Region="433, 89, 254, 20" />
+              <uc:CvElementInfo Category="Cell" Region="209, 89, 224, 20" />
+              <uc:CvElementInfo Category="Cell" Region="433, 66, 254, 23" />
+              <uc:CvElementInfo Category="Cell" Region="209, 66, 224, 23" />
+              <uc:CvElementInfo Category="Cell" Region="687, 66, 239, 23" />
+              <uc:CvElementInfo Category="Cell" Region="687, 89, 239, 20" />
+              <uc:CvElementInfo Category="Cell" Region="17, 89, 192, 20" />
+              <uc:CvElementInfo Category="Cell" Region="17, 66, 192, 23" />
+              <uc:CvElementInfo Category="Cell" Region="687, 109, 239, 12" />
+              <uc:CvElementInfo Category="Cell" Region="209, 109, 224, 12" />
+              <uc:CvElementInfo Category="Cell" Region="383, 162, 178, 29" />
+              <uc:CvElementInfo Category="Cell" Region="561, 162, 180, 29" />
+              <uc:CvElementInfo Category="Cell" Region="561, 191, 180, 22" />
+              <uc:CvElementInfo Category="Cell" Region="383, 191, 178, 22" />
+              <uc:CvElementInfo Category="Cell" Region="741, 162, 188, 29" />
+              <uc:CvElementInfo Category="Cell" Region="741, 191, 188, 22" />
+              <uc:CvElementInfo Category="Cell" Region="16, 162, 367, 29" />
+              <uc:CvElementInfo Category="Cell" Region="16, 191, 367, 22" />
+              <uc:CvElementInfo Category="Cell" Region="583, 3, 365, 23" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="35, 165, 417, 31" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="737, 166, 182, 31" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="443, 91, 247, 21" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="216, 69, 217, 22" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="565, 166, 170, 29" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="380, 193, 190, 21" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="443, 70, 249, 22" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="691, 70, 232, 21" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="214, 91, 218, 22" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="21, 194, 472, 20" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="22, 91, 189, 24" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="695, 69, 234, 22" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="433, 109, 254, 12" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="17, 100, 192, 21" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="433, 53, 254, 13" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="209, 53, 224, 13" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1, 26, 947, 32" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="583, 3, 365, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="937, 3, 11, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="481, 26, 456, 32" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1, 3, 582, 23" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1, 3, 10, 23" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="442, 3, 506, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="442, 3, 0, 23" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="442, 3, 141, 23" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="442, 3, 39, 23" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1, 3, 582, 0" />
+            </scg:List>
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="32">
+              <uc:OcrTextInfo Region="26, 51, 57, 13" Text="Taxpayer" />
+              <uc:OcrTextInfo Region="87, 51, 41, 10" Text="Details" />
+              <uc:OcrTextInfo Region="33, 75, 20, 10" Text="PIN" />
+              <uc:OcrTextInfo Region="33, 97, 20, 10" Text="PIN" />
+              <uc:OcrTextInfo Region="59, 97, 38, 10" Text="Status" />
+              <uc:OcrTextInfo Region="27, 148, 63, 13" Text="Obligation" />
+              <uc:OcrTextInfo Region="95, 148, 41, 10" Text="Details" />
+              <uc:OcrTextInfo Region="216, 75, 82, 10" Text="A012263031Z" />
+              <uc:OcrTextInfo Region="216, 97, 36, 10" Text="Active" />
+              <uc:OcrTextInfo Region="153, 176, 63, 13" Text="Obligation" />
+              <uc:OcrTextInfo Region="221, 176, 35, 10" Text="Name" />
+              <uc:OcrTextInfo Region="33, 199, 41, 10" Text="Income" />
+              <uc:OcrTextInfo Region="78, 199, 20, 10" Text="Tax" />
+              <uc:OcrTextInfo Region="102, 205, 4, 1" Text="-" />
+              <uc:OcrTextInfo Region="110, 199, 51, 10" Text="Resident" />
+              <uc:OcrTextInfo Region="166, 199, 53, 10" Text="Individual" />
+              <uc:OcrTextInfo Region="441, 10, 21, 10" Text="PIN" />
+              <uc:OcrTextInfo Region="466, 10, 42, 10" Text="Details" />
+              <uc:OcrTextInfo Region="441, 75, 56, 13" Text="Taxpayer" />
+              <uc:OcrTextInfo Region="501, 75, 34, 10" Text="Name" />
+              <uc:OcrTextInfo Region="441, 97, 25, 10" Text="iTax" />
+              <uc:OcrTextInfo Region="471, 97, 38, 10" Text="Status" />
+              <uc:OcrTextInfo Region="441, 199, 61, 13" Text="Registered" />
+              <uc:OcrTextInfo Region="696, 75, 21, 10" Text="Phil" />
+              <uc:OcrTextInfo Region="722, 75, 59, 13" Text="Kipkemboi" />
+              <uc:OcrTextInfo Region="696, 97, 62, 13" Text="Registered" />
+              <uc:OcrTextInfo Region="775, 176, 54, 10" Text="Effedive" />
+              <uc:OcrTextInfo Region="833, 176, 14, 10" Text="To" />
+              <uc:OcrTextInfo Region="852, 176, 27, 10" Text="Date" />
+              <uc:OcrTextInfo Region="669, 199, 63, 10" Text="1010812018" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="532477238d3fee2700f6d5c014889e5e" Selector="&lt;webctrl idx='3' parentid='pinCheckerForm' tag='CENTER' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+      </p:CVScope.Target>
+    </p:CVScope>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1005,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[elementOut.ToString]" />
+  </Sequence>
+</Activity>
