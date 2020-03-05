@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1560,5987" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1828,5434" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
       <x:String>System.Activities</x:String>
@@ -56,7 +56,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1540,5887" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1808,5334" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="pinData" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="rowNumber" />
@@ -74,8 +74,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="1498,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="output.xlsx" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope(Read)" sap:VirtualizedContainerService.HintSize="1498,260" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" WorkbookPath="input.xlsx">
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="1766,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="output.xlsx" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope(Read)" sap:VirtualizedContainerService.HintSize="1766,260" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" WorkbookPath="kra input.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -98,13 +98,13 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="1498,4616" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Url="https://itax.kra.go.ke/KRA-Portal/pinChecker.htm">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="1766,4880" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Url="https://itax.kra.go.ke/KRA-Portal/pinChecker.htm">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1464,4517" sap2010:WorkflowViewState.IdRef="Sequence_42">
+          <Sequence sap:VirtualizedContainerService.HintSize="1732,4781" sap2010:WorkflowViewState.IdRef="Sequence_42">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="captchaText" />
               <Variable x:TypeArguments="x:String" Name="arith" />
@@ -123,15 +123,14 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Search for each PIN" sap:VirtualizedContainerService.HintSize="1422,4363" sap2010:WorkflowViewState.IdRef="Sequence_39">
+            <Sequence DisplayName="Search for each PIN" sap:VirtualizedContainerService.HintSize="1690,4627" sap2010:WorkflowViewState.IdRef="Sequence_39">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1380,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_3" />
-              <ui:BuildDataTable DataTable="[builtPinData]" DisplayName="Initialize Out Data Table" sap:VirtualizedContainerService.HintSize="1380,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;_x0023_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;MEMBERNO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SCHJOINTDT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Taxpayer_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;iTax_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <While sap:VirtualizedContainerService.HintSize="1380,4110" sap2010:WorkflowViewState.IdRef="While_4">
+              <ui:BuildDataTable DataTable="[builtPinData]" DisplayName="Initialize Out Data Table" sap:VirtualizedContainerService.HintSize="1648,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;_x0023_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;MEMBERNO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SCHJOINTDT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Taxpayer_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PIN_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;iTax_x0020_Status&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <While sap:VirtualizedContainerService.HintSize="1648,4436" sap2010:WorkflowViewState.IdRef="While_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,22 +140,22 @@
                 <While.Condition>
                   <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="rowNumber&lt;pinData.Rows.Count" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
                 </While.Condition>
-                <Sequence sap:VirtualizedContainerService.HintSize="1334,3953" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                <Sequence sap:VirtualizedContainerService.HintSize="1602,4279" sap2010:WorkflowViewState.IdRef="Sequence_56">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[pinData.Rows(rowNumber)(&quot;KRAPIN&quot;).ToString=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="1292,3598" sap2010:WorkflowViewState.IdRef="If_17">
+                  <If Condition="[pinData.Rows(rowNumber)(&quot;KRAPIN&quot;).ToString=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="1560,3986" sap2010:WorkflowViewState.IdRef="If_17">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,1241" sap2010:WorkflowViewState.IdRef="Sequence_49">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_62">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_62">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[hashOut]</OutArgument>
                           </Assign.To>
@@ -164,7 +163,7 @@
                             <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("#").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_63">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_63">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[memberNumber]</OutArgument>
                           </Assign.To>
@@ -172,7 +171,7 @@
                             <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("MEMBERNO").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_64">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_64">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[schDate]</OutArgument>
                           </Assign.To>
@@ -180,7 +179,7 @@
                             <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("SCHJOINTDT").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_65">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[pinOut]</OutArgument>
                           </Assign.To>
@@ -188,7 +187,7 @@
                             <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("KRAPIN").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_66">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[statusOut]</OutArgument>
                           </Assign.To>
@@ -196,7 +195,7 @@
                             <InArgument x:TypeArguments="x:String">EMPTY PIN</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_67">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_67">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[nameOut]</OutArgument>
                           </Assign.To>
@@ -204,7 +203,7 @@
                             <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("MEMBERNAME").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_68">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_68">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[iTaxOut]</OutArgument>
                           </Assign.To>
@@ -212,10 +211,40 @@
                             <InArgument x:TypeArguments="x:String">EMPTY PIN</InArgument>
                           </Assign.Value>
                         </Assign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{hashOut,memberNumber,schDate,pinOut,nameOut,statusOut,iTaxOut}]" DataTable="[builtPinData]" DisplayName="Add Data Row to Table" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                        <ui:FilterDataTable DataTable="[builtPinData]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[sortedPinData]" SelectColumnsMode="Keep">
+                          <ui:FilterDataTable.Filters>
+                            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                              <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                            </scg:List>
+                          </ui:FilterDataTable.Filters>
+                          <ui:FilterDataTable.SelectColumns>
+                            <scg:List x:TypeArguments="InArgument" Capacity="4">
+                              <x:Null />
+                            </scg:List>
+                          </ui:FilterDataTable.SelectColumns>
+                        </ui:FilterDataTable>
+                        <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope(Write)" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" Visible="False" WorkbookPath="kra output.xlsx">
+                          <ui:ExcelApplicationScope.Body>
+                            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelWriteRange AddHeaders="True" DataTable="[sortedPinData]" DisplayName="Write PIN Out data" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="Sheet1" StartingCell="A1" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ExcelApplicationScope.Body>
+                        </ui:ExcelApplicationScope>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="767,3451" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                      <Sequence sap:VirtualizedContainerService.HintSize="1039,3839" sap2010:WorkflowViewState.IdRef="Sequence_55">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="textOut" />
                           <Variable x:TypeArguments="x:Boolean" Name="wrongArith" />
@@ -226,7 +255,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="5" DelayMS="5" DisplayName="Type Into PIN" EmptyField="True" sap:VirtualizedContainerService.HintSize="725,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SimulateType="True" Text="[pinData.Rows(rowNumber)(&quot;KRAPIN&quot;).ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="5" DelayMS="5" DisplayName="Type Into PIN" EmptyField="True" sap:VirtualizedContainerService.HintSize="997,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SimulateType="True" Text="[pinData.Rows(rowNumber)(&quot;KRAPIN&quot;).ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f33aec0dcbd2d9a3586088068c4c8d7b" Selector="&lt;webctrl id='vo.pinNo' tag='INPUT' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -238,7 +267,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'IMG  captcha_img'" sap:VirtualizedContainerService.HintSize="725,168" sap2010:WorkflowViewState.IdRef="GetOCRText_6">
+                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'IMG  captcha_img'" sap:VirtualizedContainerService.HintSize="997,168" sap2010:WorkflowViewState.IdRef="GetOCRText_6">
                           <ui:GetOCRText.OCREngine>
                             <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                               <ActivityFunc.Argument>
@@ -261,7 +290,7 @@
                             <OutArgument x:TypeArguments="x:String">[captchaText]</OutArgument>
                           </ui:GetOCRText.Text>
                         </ui:GetOCRText>
-                        <Assign sap:VirtualizedContainerService.HintSize="725,60" sap2010:WorkflowViewState.IdRef="Assign_69">
+                        <Assign sap:VirtualizedContainerService.HintSize="997,60" sap2010:WorkflowViewState.IdRef="Assign_69">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[arith]</OutArgument>
                           </Assign.To>
@@ -269,7 +298,7 @@
                             <InArgument x:TypeArguments="x:String">[captchaText]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[InStr(arith,&quot;+&quot;c)&gt;0]" DisplayName="If(Perform addition or subtraction)" sap:VirtualizedContainerService.HintSize="725,51" sap2010:WorkflowViewState.IdRef="If_15">
+                        <If Condition="[InStr(arith,&quot;+&quot;c)&gt;0]" DisplayName="If(Perform addition or subtraction)" sap:VirtualizedContainerService.HintSize="997,51" sap2010:WorkflowViewState.IdRef="If_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -381,7 +410,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="5" DelayMS="5" DisplayName="Type Into Captcha Ans" EmptyField="True" sap:VirtualizedContainerService.HintSize="725,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" SimulateType="True" Text="[ans.ToString]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="5" DelayMS="5" DisplayName="Type Into Captcha Ans" EmptyField="True" sap:VirtualizedContainerService.HintSize="997,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" SimulateType="True" Text="[ans.ToString]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="93a6eec98ca02b984cb2e9c6f4ee77ef" Selector="&lt;webctrl id='captcahText' tag='INPUT' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -393,7 +422,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Consult" sap:VirtualizedContainerService.HintSize="725,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Consult" sap:VirtualizedContainerService.HintSize="997,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -415,7 +444,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:OCRTextExists DisplayName="OCR Text Exists 'B'" sap:VirtualizedContainerService.HintSize="725,201" sap2010:WorkflowViewState.IdRef="OCRTextExists_1" Occurrence="1" Result="[wrongArith]" Text="Wrong result of the arithmetic operation.">
+                        <ui:OCRTextExists DisplayName="OCR Text Exists 'B'" sap:VirtualizedContainerService.HintSize="997,201" sap2010:WorkflowViewState.IdRef="OCRTextExists_1" Occurrence="1" Result="[wrongArith]" Text="Wrong result of the arithmetic operation.">
                           <ui:OCRTextExists.OCREngine>
                             <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                               <ActivityFunc.Argument>
@@ -432,7 +461,7 @@
                             </ui:Target>
                           </ui:OCRTextExists.Target>
                         </ui:OCRTextExists>
-                        <While sap:VirtualizedContainerService.HintSize="725,855" sap2010:WorkflowViewState.IdRef="While_5">
+                        <While sap:VirtualizedContainerService.HintSize="997,855" sap2010:WorkflowViewState.IdRef="While_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -686,7 +715,7 @@
                             </ui:OCRTextExists>
                           </Sequence>
                         </While>
-                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="725,106" sap2010:WorkflowViewState.IdRef="GetValue_34">
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="997,106" sap2010:WorkflowViewState.IdRef="GetValue_34">
                           <ui:GetValue.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d3bc957a32115efcadd389dd06c9f654" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;center&amp;gt;div&amp;gt;table' idx='2' parentid='pinCheckerForm' tag='TABLE' /&gt;&lt;webctrl idx='1' tag='TD' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -701,17 +730,16 @@
                             <OutArgument x:TypeArguments="x:String">[textOut]</OutArgument>
                           </ui:GetValue.Value>
                         </ui:GetValue>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="725,61" sap2010:WorkflowViewState.IdRef="WriteLine_67" Text="[textOut]" />
-                        <If Condition="[textOut=&quot;PIN Details&quot;]" sap:VirtualizedContainerService.HintSize="725,1083" sap2010:WorkflowViewState.IdRef="If_16">
+                        <If Condition="[textOut=&quot;PIN Details&quot;]" sap:VirtualizedContainerService.HintSize="997,1572" sap2010:WorkflowViewState.IdRef="If_16">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,936" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,1425" sap2010:WorkflowViewState.IdRef="Sequence_53">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_74">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_74">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[hashOut]</OutArgument>
                                 </Assign.To>
@@ -719,7 +747,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("#").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_75">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_75">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[memberNumber]</OutArgument>
                                 </Assign.To>
@@ -727,7 +755,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("MEMBERNO").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_76">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_76">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[schDate]</OutArgument>
                                 </Assign.To>
@@ -735,7 +763,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("SCHJOINTDT").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:GetValue ContinueOnError="True" DisplayName="Get Text PIN" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_30">
+                              <ui:GetValue ContinueOnError="True" DisplayName="Get Text PIN" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="GetValue_30">
                                 <ui:GetValue.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cfe0185c835d26cbacd151b4bc92f4d3" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;center&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;fieldset&amp;gt;table' parentid='pinCheckerForm' tag='TABLE' /&gt;&lt;webctrl idx='1' isleaf='1' tag='TD' /&gt;" TimeoutMS="50">
                                     <ui:Target.WaitForReady>
@@ -747,7 +775,7 @@
                                   <OutArgument x:TypeArguments="x:String">[pinOut]</OutArgument>
                                 </ui:GetValue.Value>
                               </ui:GetValue>
-                              <ui:GetValue ContinueOnError="True" DisplayName="Get PIN Status" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_31">
+                              <ui:GetValue ContinueOnError="True" DisplayName="Get PIN Status" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="GetValue_31">
                                 <ui:GetValue.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="54d0dbc23063f19440336faf5eb4f1d0" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;center&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;fieldset&amp;gt;table' parentid='pinCheckerForm' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='2' tableRow='2' tag='TD' /&gt;" TimeoutMS="50">
                                     <ui:Target.WaitForReady>
@@ -759,7 +787,7 @@
                                   <OutArgument x:TypeArguments="x:String">[statusOut]</OutArgument>
                                 </ui:GetValue.Value>
                               </ui:GetValue>
-                              <ui:GetValue ContinueOnError="True" DisplayName="Get Taxpayer Name" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_32">
+                              <ui:GetValue ContinueOnError="True" DisplayName="Get Taxpayer Name" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="GetValue_32">
                                 <ui:GetValue.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3f9a3138fe2d51e35da72005ed435971" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;center&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;fieldset&amp;gt;table' parentid='pinCheckerForm' tag='TABLE' /&gt;&lt;webctrl idx='1' isleaf='1' tableCol='4' tag='TD' /&gt;" TimeoutMS="50">
                                     <ui:Target.WaitForReady>
@@ -771,7 +799,7 @@
                                   <OutArgument x:TypeArguments="x:String">[nameOut]</OutArgument>
                                 </ui:GetValue.Value>
                               </ui:GetValue>
-                              <ui:GetValue ContinueOnError="True" DisplayName="Get iTax Status" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_33">
+                              <ui:GetValue ContinueOnError="True" DisplayName="Get iTax Status" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="GetValue_33">
                                 <ui:GetValue.Target>
                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="49986a45bc3c1552212913b5e887da42" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;center&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;fieldset&amp;gt;table' parentid='pinCheckerForm' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='4' tableRow='2' tag='TD' /&gt;" TimeoutMS="50">
                                     <ui:Target.WaitForReady>
@@ -783,17 +811,47 @@
                                   <OutArgument x:TypeArguments="x:String">[iTaxOut]</OutArgument>
                                 </ui:GetValue.Value>
                               </ui:GetValue>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{hashOut,memberNumber,schDate,pinOut,nameOut,statusOut,iTaxOut}]" DataTable="[builtPinData]" DisplayName="Add Data Row to Table" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                              <ui:FilterDataTable DataTable="[builtPinData]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[sortedPinData]" SelectColumnsMode="Keep">
+                                <ui:FilterDataTable.Filters>
+                                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                    <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                                  </scg:List>
+                                </ui:FilterDataTable.Filters>
+                                <ui:FilterDataTable.SelectColumns>
+                                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                    <x:Null />
+                                  </scg:List>
+                                </ui:FilterDataTable.SelectColumns>
+                              </ui:FilterDataTable>
+                              <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope(Write)" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" Visible="False" WorkbookPath="kra output.xlsx">
+                                <ui:ExcelApplicationScope.Body>
+                                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExcelWriteRange AddHeaders="True" DataTable="[sortedPinData]" DisplayName="Write PIN Out data" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="Sheet1" StartingCell="A1" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ExcelApplicationScope.Body>
+                              </ui:ExcelApplicationScope>
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="304,752" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,1241" sap2010:WorkflowViewState.IdRef="Sequence_54">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_77">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_77">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[hashOut]</OutArgument>
                                 </Assign.To>
@@ -801,7 +859,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("#").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_78">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_78">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[memberNumber]</OutArgument>
                                 </Assign.To>
@@ -809,7 +867,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("MEMBERNO").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_79">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_79">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[schDate]</OutArgument>
                                 </Assign.To>
@@ -817,7 +875,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("SCHJOINTDT").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_80">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_80">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[pinOut]</OutArgument>
                                 </Assign.To>
@@ -825,7 +883,7 @@
                                   <InArgument x:TypeArguments="x:String">[pinData.Rows(rowNumber)("KRAPIN").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_81">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_81">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[statusOut]</OutArgument>
                                 </Assign.To>
@@ -833,7 +891,7 @@
                                   <InArgument x:TypeArguments="x:String">Invalid PIN</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_82">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_82">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[nameOut]</OutArgument>
                                 </Assign.To>
@@ -841,7 +899,7 @@
                                   <InArgument x:TypeArguments="x:String">Invalid PIN</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_83">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_83">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[iTaxOut]</OutArgument>
                                 </Assign.To>
@@ -849,15 +907,44 @@
                                   <InArgument x:TypeArguments="x:String">Invalid PIN</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{hashOut,memberNumber,schDate,pinOut,nameOut,statusOut,iTaxOut}]" DataTable="[builtPinData]" DisplayName="Add Data Row to Table" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                              <ui:FilterDataTable DataTable="[builtPinData]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[sortedPinData]" SelectColumnsMode="Keep">
+                                <ui:FilterDataTable.Filters>
+                                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                    <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                                  </scg:List>
+                                </ui:FilterDataTable.Filters>
+                                <ui:FilterDataTable.SelectColumns>
+                                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                    <x:Null />
+                                  </scg:List>
+                                </ui:FilterDataTable.SelectColumns>
+                              </ui:FilterDataTable>
+                              <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope(Write)" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" Visible="False" WorkbookPath="kra output.xlsx">
+                                <ui:ExcelApplicationScope.Body>
+                                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExcelWriteRange AddHeaders="True" DataTable="[sortedPinData]" DisplayName="Write PIN Out data" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_6" SheetName="Sheet1" StartingCell="A1" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ExcelApplicationScope.Body>
+                              </ui:ExcelApplicationScope>
                             </Sequence>
                           </If.Else>
                         </If>
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{hashOut,memberNumber,schDate,pinOut,nameOut,statusOut,iTaxOut}]" DataTable="[builtPinData]" DisplayName="Add Data Row to Table" sap:VirtualizedContainerService.HintSize="1292,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1292,61" sap2010:WorkflowViewState.IdRef="WriteLine_66" Text="[rowNumber.ToString]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="1292,60" sap2010:WorkflowViewState.IdRef="Assign_58">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1560,61" sap2010:WorkflowViewState.IdRef="WriteLine_66" Text="[rowNumber.ToString+&quot;: Hash &quot;+hashOut]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="1560,60" sap2010:WorkflowViewState.IdRef="Assign_58">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[rowNumber]</OutArgument>
                     </Assign.To>
@@ -868,7 +955,7 @@
                 </Sequence>
               </While>
             </Sequence>
-            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="1422,22" sap2010:WorkflowViewState.IdRef="CloseTab_4" />
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="1690,22" sap2010:WorkflowViewState.IdRef="CloseTab_4" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
@@ -879,58 +966,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:FilterDataTable DataTable="[builtPinData]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="1498,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[sortedPinData]" SelectColumnsMode="Keep">
-      <ui:FilterDataTable.Filters>
-        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-          <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-        </scg:List>
-      </ui:FilterDataTable.Filters>
-      <ui:FilterDataTable.SelectColumns>
-        <scg:List x:TypeArguments="InArgument" Capacity="4">
-          <x:Null />
-        </scg:List>
-      </ui:FilterDataTable.SelectColumns>
-    </ui:FilterDataTable>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope(Write)" sap:VirtualizedContainerService.HintSize="1498,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" Visible="False" WorkbookPath="output.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_32">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelWriteRange AddHeaders="True" DataTable="[sortedPinData]" DisplayName="Write PIN Out data" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="Sheet1" StartingCell="A1" />
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
-    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1490,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" Visible="False" WorkbookPath="output.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,241" sap2010:WorkflowViewState.IdRef="Sequence_46">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
-            <ui:ReadRange AddHeaders="True" DataTable="[outData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="output.xlsx">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-            </ui:ReadRange>
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
   </Sequence>
 </Activity>
